@@ -1,13 +1,212 @@
+@font-face {
+  font-family: 'PoppinsLight';
+  src: local('PoppinsLight'),
+       url('./fonts/Poppins-Light.ttf') format('truetype')
+}
+@font-face {
+  font-family: 'PoppinsMedium';
+  src: local('PoppinsMedium'),
+       url('./fonts/Poppins-Medium.ttf') format('truetype')
+}
+@font-face {
+  font-family: 'PoppinsBold';
+  src: local('PoppinsBold'),
+       url('./fonts/Poppins-Bold.ttf') format('truetype')
+}
+
+
+
+/* width */
+::-webkit-scrollbar
+{
+    width: 10px;
+}
+
+/* Track */
+::-webkit-scrollbar-track {
+    background: #f1f1f1;
+    background: linear-gradient(49deg,#6fff7b,#7bcaff);
+                border-radius:100px;          
+}
+
+/* Handle */
+::-webkit-scrollbar-thumb {
+    background:#151517;
+    border-radius:10px;
+    
+}
+
+/* Handle on hover */
+::-webkit-scrollbar-thumb:hover{
+    box-shadow: inset -6px -6px 10px rgba(255,255,255,0.05),
+                inset 6px 6px 20px rgba(0,0,0,0.5);
+}
+
+@-webkit-keyframes Coolbg {
+  0%{background-position:0% 90%}
+  50%{background-position:100% 11%}
+  100%{background-position:0% 90%}
+}
+@-moz-keyframes Coolbg {
+  0%{background-position:0% 90%}
+  50%{background-position:100% 11%}
+  100%{background-position:0% 90%}
+}
+@keyframes Coolbg {
+  0%{background-position:0% 90%}
+  50%{background-position:100% 11%}
+  100%{background-position:0% 90%}
+}
+
+
 body {
   margin: 0;
-  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
-    'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
-    sans-serif;
+  font-family:'PoppinsLight',sans-serif;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
+  background-color: #15202b;
+  color: #fff;
 }
 
 code {
   font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
     monospace;
+}
+#root-section{
+  text-align: center;
+}
+#text-article{
+  text-align: left;
+  margin: 3rem;
+  padding:1rem;
+  background-color:#192734;
+  border-radius:30px;
+}
+
+h1{
+  font-family: 'PoppinsBold',sans-serif;
+  font-size: 7rem;
+  padding:0rem;
+  margin:0rem;
+  margin-top:10rem;
+  background: linear-gradient(49deg,#00ffea,#5fbfff,#6e71ff,#db28ff);
+    background-size: 400% 400%;
+    background-clip:text;
+    -webkit-background-clip: text;
+    -moz-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    -webkit-animation: Coolbg 5s ease infinite;
+    -moz-animation: Coolbg 5s ease infinite;
+    animation: Coolbg 5s ease infinite;
+}
+
+h3{
+  font-family: 'PoppinsMedium',sans-serif;
+  margin: 0rem;
+  padding:0rem;
+  margin-bottom: 3rem;
+}
+
+
+
+.btn{
+  cursor: pointer;
+  outline: none;
+  border: none;
+  padding: 1rem 2rem;
+  border-radius:10px;
+  text-transform: uppercase;
+  background:#15202b;
+  color:#fff;
+  box-shadow: -6px -6px 20px rgba(255,255,255,0.04),6px 6px 20px rgba(0,0,0,0.4);
+  transition: all 0.5s ease-in-out;
+
+}
+.btn:hover,
+.btn:active,
+.btn:focus
+{
+  box-shadow: inset -6px -6px 10px rgba(255,255,255,0.03),
+                inset 6px 6px 20px rgba(0,0,0,0.3);
+}
+
+#submit-btn{
+  margin-left: 2rem;
+}
+#copy-btn{
+  margin-top: 2rem;
+}
+#troll-text{
+  text-align: center;
+}
+input {
+  text-align:center;
+  color: #fff;
+  background-color: #15202b;
+  padding: 1.25rem 2rem;
+  padding-top: 1rem;
+  padding-left:0rem;
+  margin: 1rem 2rem;
+  margin-right: 0rem;
+  margin-left:3.5rem;
+  width: 5rem;
+  border-radius: 10px;
+  border: none;
+  font-size: 1.25rem;
+  box-shadow: inset -6px -6px 10px rgba(255,255,255,0.03),
+                inset 6px 6px 20px rgba(0,0,0,0.3);
+}
+
+
+@media screen and (max-width:811px){
+  h1{
+    font-size:6rem;
+  }
+}
+@media screen and (max-width:695px){
+  h1{
+    font-size:5rem;
+  }
+}
+@media screen and (max-width:580px){
+  h1{
+    font-size:4rem;
+  }
+  h3{
+    font-size:80%;
+  }
+}
+
+@media screen and (max-width:467px){
+  h1{
+    font-size:3.5rem;
+  }
+  h3{
+    font-size:75%;
+  }
+  label{
+    display:block;
+  }
+  input{
+    display:block;
+    text-align:center;
+    margin: 1.5rem auto;
+  }
+  .btn{
+    display:block;
+    margin: 1.5rem auto;
+  }
+  #submit-btn{
+    margin: 1.5rem auto;
+  }
+}
+@media screen and (max-width:407px){
+  h1{
+    font-size: 3rem;
+  }
+}
+@media screen and (max-width:347px){
+  h1{
+    font-size: 2.5rem;
+  }
 }
