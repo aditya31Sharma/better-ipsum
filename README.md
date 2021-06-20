@@ -1,2 +1,2 @@
 # Bored of regular Lorem-ipsum?
-Try better-ipsum.\
+Try better-ipsum .\
