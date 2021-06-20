@@ -36,7 +36,7 @@ function App() {
     <h1>Better-ipsum</h1>
 
 
-    <h3>because Lorem ipsum isn't enough</h3>
+    <h3>Lorem ipsum isn't enough</h3>
 
 
     <form onSubmit={handleSubmit}>
